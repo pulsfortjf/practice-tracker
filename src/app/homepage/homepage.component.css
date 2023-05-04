@@ -19,3 +19,8 @@ h2 {
     font-size: 20px;
     margin-left: 16px;
 }
+
+#indent {
+    margin-left: 32px;
+    font-weight: bold;
+}

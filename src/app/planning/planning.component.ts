@@ -76,7 +76,9 @@ export class PlanningComponent {
   }
 
   clearData() {
-    this.localStore.clearData();
+    this.localStore.removeData('hours');
+    this.localStore.removeData('globalHoursPerWeek');
+    this.localStore.removeData('practicingDays');
     this.hours = 0;
     this.globalHoursPerWeek = 0;
     this.practicingDays = [false, false, false, false, false, false, false,];

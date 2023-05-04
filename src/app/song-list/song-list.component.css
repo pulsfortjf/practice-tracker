@@ -1,0 +1,62 @@
+#content {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+mat-form-field {
+    width: 600px;
+}
+
+input {
+    font-size: 24px;
+    background-color: rgb(243, 220, 188);
+    width: 512px;
+}
+
+.song-list {
+    list-style-type: none;
+    margin-top: 4px;
+    margin-left: -16px;
+    margin-bottom: 48px;
+}
+
+iframe {
+    margin-left: 25%;
+    aspect-ratio: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkbox-label {
+    font-size: 24px;
+}
+
+#video-link:link #video-link:visited {
+    text-decoration: none;
+}
+
+.counter-buttons {
+    margin-top: -16px;
+    display: inline-block;
+}
+
+#save {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    background-color: rgb(243, 220, 188);
+}
+
+#delete {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    background-color: rgb(243, 220, 188);
+}

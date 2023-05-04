@@ -4,6 +4,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { SongListComponent } from './song-list/song-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CounterComponent } from './counter/counter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,14 @@ import { CounterComponent } from './counter/counter.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
     RouterModule.forRoot([
       {path: '', component: HomepageComponent},
       {path: 'planning', component: PlanningComponent},
