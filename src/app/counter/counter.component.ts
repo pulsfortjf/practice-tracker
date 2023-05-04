@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'counter',
@@ -6,16 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-    public count = 0;
+  @Input()  count!: number;
+  @Output() countChange = new EventEmitter<number>();
 
-    increase(): void {
-        this.count += 1;
-        console.log(this.count);
-    }
+  increase(): void {
+    if (this.count < 24)
+      this.count += 1;
+    console.log(this.count);
+    this.countChange.emit(this.count);
+  }
 
-    decrease(): void {
-      if (this.count > 0) 
-        this.count -= 1;
-      console.log(this.count);
-    }
+  decrease(): void {
+    if (this.count > 0) 
+      this.count -= 1;
+    console.log(this.count);
+    this.countChange.emit(this.count);
+  }
 }

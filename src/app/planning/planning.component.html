@@ -2,17 +2,19 @@
     <h1>Practice Goals</h1>
     <h2>Select which days you will practice this week:</h2>
     <mat-button-toggle-group name="days" aria-label="Days" multiple>
-        <mat-button-toggle value="sun" (click)="onDayToggle(0)">Sunday</mat-button-toggle>
-        <mat-button-toggle value="mon" (click)="onDayToggle(1)">Monday</mat-button-toggle>
-        <mat-button-toggle value="tues" (click)="onDayToggle(2)">Tuesday</mat-button-toggle>
-        <mat-button-toggle value="wed" (click)="onDayToggle(3)">Wednesday</mat-button-toggle>
-        <mat-button-toggle value="thurs" (click)="onDayToggle(4)">Thursday</mat-button-toggle>
-        <mat-button-toggle value="fri" (click)="onDayToggle(5)">Friday</mat-button-toggle>
-        <mat-button-toggle value="sat" (click)="onDayToggle(6)">Saturday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[0]" (click)="onDayToggle(0)">Sunday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[1]" (click)="onDayToggle(1)">Monday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[2]" (click)="onDayToggle(2)">Tuesday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[3]" (click)="onDayToggle(3)">Wednesday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[4]" (click)="onDayToggle(4)">Thursday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[5]" (click)="onDayToggle(5)">Friday</mat-button-toggle>
+        <mat-button-toggle [checked]="practicingDays[6]" (click)="onDayToggle(6)">Saturday</mat-button-toggle>
     </mat-button-toggle-group>
-    <h2>Set how many hours you will practice this week:</h2>
-    <counter></counter><button id="go" (click)="updateHours()">Go</button>
+    <h2>Set how many hours you will practice each day:</h2>
+    <counter class="counter-buttons" [(count)]="hours" (click)="updateHours()"></counter>
+    <button mat-raised-button class="counter-buttons" id="save" (click)="saveData()">Save</button>
+    <button mat-raised-button class="counter-buttons" id="clear" (click)="clearData()">Clear</button>
     <div id="display">
-        You need to practice {{ hours }} hours per day in order to reach your goal for this week.
+        Your total practice time goal for this week will be {{globalHoursPerWeek}} hours.
     </div>
 </div>

@@ -24,3 +24,21 @@ mat-button-toggle-group {
     background-color: rgb(23, 163, 72);
     color:floralwhite;
 }
+
+.counter-buttons {
+    display: inline-block;
+}
+
+#save {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    background-color: rgb(243, 220, 188);
+}
+
+#clear {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    background-color: rgb(243, 220, 188);
+}
