@@ -1,0 +1,21 @@
+#content {
+    color:black;
+    font-size: 24px;
+}
+
+#acro {
+    color: rgb(23, 163, 72);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+#description {
+    font-size: 20px;
+    margin-left: 16px;
+}

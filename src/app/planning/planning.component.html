@@ -1,0 +1,18 @@
+<div id="content">
+    <h1>Practice Goals</h1>
+    <h2>Select which days you will practice this week:</h2>
+    <mat-button-toggle-group name="days" aria-label="Days" multiple>
+        <mat-button-toggle value="sun" (click)="onDayToggle(0)">Sunday</mat-button-toggle>
+        <mat-button-toggle value="mon" (click)="onDayToggle(1)">Monday</mat-button-toggle>
+        <mat-button-toggle value="tues" (click)="onDayToggle(2)">Tuesday</mat-button-toggle>
+        <mat-button-toggle value="wed" (click)="onDayToggle(3)">Wednesday</mat-button-toggle>
+        <mat-button-toggle value="thurs" (click)="onDayToggle(4)">Thursday</mat-button-toggle>
+        <mat-button-toggle value="fri" (click)="onDayToggle(5)">Friday</mat-button-toggle>
+        <mat-button-toggle value="sat" (click)="onDayToggle(6)">Saturday</mat-button-toggle>
+    </mat-button-toggle-group>
+    <h2>Set how many hours you will practice this week:</h2>
+    <counter></counter><button id="go" (click)="updateHours()">Go</button>
+    <div id="display">
+        You need to practice {{ hours }} hours per day in order to reach your goal for this week.
+    </div>
+</div>

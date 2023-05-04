@@ -1,0 +1,26 @@
+#content {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+mat-button-toggle-group {
+    font-size: 24px;
+}
+
+.mat-button-toggle {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(243, 220, 188);
+}
+
+.mat-button-toggle-checked {
+    background-color: rgb(23, 163, 72);
+    color:floralwhite;
+}
