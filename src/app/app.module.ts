@@ -6,16 +6,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PlanningComponent } from './planning/planning.component';
 import { SongListComponent } from './song-list/song-list.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { CounterComponent } from './counter/counter.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
