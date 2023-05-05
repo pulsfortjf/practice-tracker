@@ -3,18 +3,20 @@
     <mat-form-field appearance="fill">
         <input matInput placeholder="Song Name, Song URL" [(ngModel)]="songDetails">
     </mat-form-field>
-    <ul class="song-list">
+    <ul class="song-list" [(ngModel)]="task.subtasks">
         <li *ngFor="let subtask of task.subtasks">
-            <mat-checkbox [(ngModel)]="subtask.completed" (change)="onChange(subtask.name)"
-                        (ngModelChange)="updateAllComplete()">
-                <label id="checkbox-label"><a id="video-link" href={{subtask.link}} target="_blank">{{subtask.name}}</a></label>
+            <label id="checkbox-label"><a class="video-link" href={{subtask.link}} target="_blank">{{subtask.name}}</a></label>
+            <!--
+            <mat-checkbox [(ngModel)]="subtask.completed" (change)="onChange(subtask.name)" (ngModelChange)="updateAllComplete()">
+                <label id="checkbox-label"><a class="video-link" href={{subtask.link}} target="_blank">{{subtask.name}}</a></label>
             </mat-checkbox>
+            -->
             <!--embeded youtube videos did not want to work with mat-checkbox or ul for some reason so I have chosen to do links instead-->
         </li>
     </ul>
     <button mat-raised-button class="counter-buttons" id="save" routerLink="/song-list" (click)="saveData()">Save</button>
     <button mat-raised-button class="counter-buttons" id="delete" routerLink="/song-list" (click)="addSong()">Add</button>
-    <button mat-raised-button class="counter-buttons" id="delete" routerLink="/song-list" (click)="deleteSong()">Delete</button>
+    <button mat-raised-button class="counter-buttons" id="delete" routerLink="/song-list" (click)="deleteSong()">Clear</button>
 </div>
 
 <!--

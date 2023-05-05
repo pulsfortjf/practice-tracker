@@ -14,7 +14,7 @@ h2 {
 
 #increase {
     padding: 8px;
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
     border-style: solid;
     font-size: 32px;
@@ -28,11 +28,11 @@ h2 {
 }
 
 #decrease {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     padding-left: 8px;
     padding-right: 8px;
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
     border-style: solid;
     font-size: 44px;

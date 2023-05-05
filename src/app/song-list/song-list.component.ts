@@ -63,9 +63,13 @@ export class SongListComponent {
           console.log("index: " + index);
       }
     }
+    if (this.task.subtasks) {
+      this.task.subtasks[index].completed != this.task.subtasks[index].completed;
+    }
+    this.songList.splice(index, 1);
   }
 
-  songList = [];
+  songList = [0];
 
   saveData() {
     //let strSongList = this.songList.toString();
@@ -82,6 +86,7 @@ export class SongListComponent {
       }
       console.log(strSongList);
       this.localStore.saveData('strSongList', strSongList);
+      window.location.reload();
     }
   }
 
@@ -97,6 +102,8 @@ export class SongListComponent {
 
   deleteSong() {
     this.localStore.removeData('strSongList');
+    this.task.subtasks = [];
+    window.location.reload();
   }
 
   songDetails = '';
@@ -120,6 +127,10 @@ export class SongListComponent {
       this.task.subtasks = [{name: songName, link: songURL, index: 0, completed: false}];
       console.log(this.task.subtasks);
     }
+    if (this.songList.length > 1)
+      this.songList.push(0);
+    this.saveData();
+    window.location.reload();
   }
 
 
